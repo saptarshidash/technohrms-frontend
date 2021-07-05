@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:custom="http://schemas.android.com/apk/res-auto"
+  tools:context=".ui.auth.UserRegFragment">
+
+
+  <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+    android:id="@+id/employeeSpinner"
+    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:paddingTop="10sp"
+    android:paddingLeft="15dp"
+    android:background="@drawable/bg_transparent_bordered_edittext"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:smsp_hint="Select Employee"
+    app:smsp_hintColor="#757575"
+    app:smsp_itemColor="#512DA8"
+    app:smsp_itemListColor="#7C4DFF"
+    app:smsp_itemListHintBackgroundColor="#808080"
+    app:smsp_itemListHintColor="#FFFFFF"
+    app:smsp_multilineError="false"
+    app:smsp_selectedItemListColor="#FF5252"
+    custom:smsp_arrowColor="@color/black"
+    custom:smsp_enableFloatingLabel="false"
+    custom:smsp_enableSearchHeader="true"
+    custom:smsp_hintSize="15sp"
+    custom:smsp_isSearchable="true"
+    custom:smsp_paddingLeftRight="10dp"
+    custom:smsp_underlineColor="@color/smsp_transparent_color"/>
+
+  <LinearLayout
+    android:id="@+id/textRow2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/employeeSpinner">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="10"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Username"
+        android:textColor="@color/editTextSubHeading"
+
+        android:textSize="14sp" />
+
+      <EditText
+        android:id="@+id/edTxtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:background="@color/editTextBackground"
+        android:hint="Enter username"
+        android:maxLines="1"
+        android:textColorHint="@color/greyDate" />
+
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/textRow3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textRow2">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="10"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Password"
+        android:textColor="@color/editTextSubHeading"
+
+        android:textSize="14sp" />
+      <EditText
+        android:id="@+id/edTxtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:background="@color/editTextBackground"
+        android:hint="Enter password"
+        android:maxLines="1"
+        android:textColorHint="@color/greyDate" />
+
+
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+    android:id="@+id/roleSpinner"
+    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="200dp"
+    android:paddingTop="10sp"
+    android:paddingLeft="15dp"
+
+    android:background="@drawable/bg_transparent_bordered_edittext"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/textRow3"
+    app:layout_constraintTop_toBottomOf="@+id/textRow3"
+    app:smsp_hint="USER ROLE"
+    app:smsp_hintColor="#757575"
+    app:smsp_itemColor="#512DA8"
+    app:smsp_itemListColor="#7C4DFF"
+    app:smsp_itemListHintBackgroundColor="#808080"
+    app:smsp_itemListHintColor="#FFFFFF"
+    app:smsp_multilineError="false"
+    app:smsp_selectedItemListColor="#FF5252"
+    custom:smsp_arrowColor="@color/black"
+    custom:smsp_enableFloatingLabel="false"
+    custom:smsp_enableSearchHeader="true"
+    custom:smsp_hintSize="15sp"
+    custom:smsp_paddingLeftRight="10dp"
+    custom:smsp_underlineColor="@color/smsp_transparent_color" />
+
+  <Button
+    android:id="@+id/btnGenerateCred"
+    android:layout_width="0dp"
+    android:layout_height="64dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="24dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/roleSpinner"
+    app:layout_constraintTop_toBottomOf="@+id/textRow3"
+    android:text="GENERATE"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

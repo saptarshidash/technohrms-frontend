@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:checkableBehavior="single">
+
+    <item android:id="@+id/homeFragment"
+      android:title="Dashboard"
+      android:icon="@drawable/ic_dashboard"
+      >
+
+    </item>
+
+  </group>
+
+  <item android:title="User Master">
+
+    <menu>
+      <group android:checkableBehavior="single">
+        <item android:id="@+id/userRegFragment"
+          android:title="Add User"
+          android:icon="@drawable/ic_add_user"
+
+          />
+
+      </group>
+    </menu>
+
+  </item>
+
+
+
+
+    <item android:title="Employee Management">
+
+      <menu>
+        <group android:checkableBehavior="single">
+        <item android:id="@+id/employeeOverviewFragment"
+          android:title="Employee Overview"
+          android:icon="@drawable/ic_employee"
+          />
+
+
+        <item android:id="@+id/addEmployeeFragment"
+          android:title="Add Employee"
+          android:icon="@drawable/ic_add_user"
+          />
+        </group>
+      </menu>
+
+    </item>
+
+  <item android:title="Department Management">
+
+    <menu>
+      <group android:checkableBehavior="single">
+        <item android:id="@+id/addDepartmentFragment"
+          android:title="Add Department"
+          android:icon="@drawable/ic_add_department"
+          />
+        <item android:id="@+id/departmentOverviewFragment"
+          android:title="Department Overview"
+          android:icon="@drawable/ic_department"
+          />
+
+      </group>
+    </menu>
+
+  </item>
+
+  <item android:title="Designation Management">
+
+    <menu>
+      <group android:checkableBehavior="single">
+        <item android:id="@+id/addDesignationFragment"
+          android:title="Add Designation"
+          android:icon="@drawable/ic_add_designation"
+          />
+
+        <item android:id="@+id/designationListFragment"
+          android:title="Designations"
+          android:icon="@drawable/ic_designation_overview"
+          />
+
+      </group>
+    </menu>
+
+  </item>
+
+  <item android:title="Training Management">
+
+    <menu>
+      <group android:checkableBehavior="single">
+        <item android:id="@+id/trainingListFragment"
+          android:title="View Trainings"
+          android:icon="@drawable/ic_view_training"
+          />
+        <item android:id="@+id/assignedTrainingListFragment"
+          android:title="Assigned Trainings"
+          android:icon="@drawable/ic_assign_training"
+          />
+
+
+      </group>
+    </menu>
+
+  </item>
+  <item android:title="Leave Management">
+
+    <menu>
+      <group android:checkableBehavior="single">
+        <item android:id="@+id/leaveRequestListFragment"
+          android:title="Leave Requests"
+          android:icon="@drawable/ic_leave_request"
+          />
+      </group>
+    </menu>
+
+  </item>
+
+  <item android:title="Attendance">
+
+    <menu>
+      <group android:checkableBehavior="single">
+        <item android:id="@+id/attendanceListFragment"
+          android:title="Attendance Report"
+          android:icon="@drawable/ic_attendance_report"
+
+          />
+      </group>
+    </menu>
+
+  </item>
+
+
+
+
+</menu>

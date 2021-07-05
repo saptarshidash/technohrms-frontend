@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:custom="http://schemas.android.com/apk/res-auto"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".ui.attendance.AttendanceListFragment">
+
+  <LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@color/app_primary_color"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+      android:id="@+id/attendanceSpinner"
+      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:background="@drawable/round_button"
+      android:backgroundTint="@color/white"
+      app:smsp_hint="Select Employee"
+      app:smsp_hintColor="#757575"
+      app:smsp_itemColor="#512DA8"
+      app:smsp_itemListColor="#7C4DFF"
+      app:smsp_itemListHintBackgroundColor="#808080"
+      app:smsp_itemListHintColor="#FFFFFF"
+      app:smsp_multilineError="false"
+      app:smsp_selectedItemListColor="#FF5252"
+      custom:smsp_arrowColor="@color/black"
+      custom:smsp_hintSize="15sp"
+      custom:smsp_paddingLeftRight="10dp"
+      android:paddingLeft="15dp"
+      android:paddingTop="10sp"
+      custom:smsp_underlineColor="@color/smsp_transparent_color"
+      custom:smsp_isSearchable="true"
+      custom:smsp_enableSearchHeader="true"
+      custom:smsp_enableFloatingLabel="false">
+
+
+    </com.chivorn.smartmaterialspinner.SmartMaterialSpinner>
+
+
+  </LinearLayout>
+
+
+  <LinearLayout
+    android:id="@+id/layoutFilter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#2F686BB6"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    custom:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    <Button
+      android:id="@+id/btnCalendar"
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:background="@drawable/round_button"
+      android:text=" 📅 2021-07-04"
+      android:textSize="10sp" />
+
+    <androidx.cardview.widget.CardView
+      android:id="@+id/cardDailyAttendance"
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:layout_marginLeft="20dp"
+      custom:cardCornerRadius="50dp"
+      android:backgroundTint="@color/app_primary_color">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+          android:id="@+id/txtViewDailyAttendance"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="ATTENDANCE 10"
+          android:layout_gravity="center"
+          android:textColor="@color/white"
+          android:fontFamily="@font/poppins_medium"/>
+
+        <TextView
+          android:id="@+id/txtViewTotalEmp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="/100"
+          android:layout_gravity="center"
+          android:textColor="@color/white"
+          android:fontFamily="@font/poppins_medium"/>
+
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+  </LinearLayout>
+
+
+  <com.todkars.shimmer.ShimmerRecyclerView
+    android:id="@+id/recyclerAttendance"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutFilter"
+    android:orientation="vertical"
+    custom:shimmer_recycler_layout="@layout/list_item_shimmer"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    custom:shimmer_recycler_item_count="10"
+    />
+
+
+
+  <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+    android:id="@+id/calendarView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    custom:layout_constraintBottom_toBottomOf="parent"
+    custom:layout_constraintEnd_toEndOf="parent"
+    custom:layout_constraintStart_toStartOf="parent"
+    custom:layout_constraintTop_toTopOf="parent"
+    custom:cardElevation="5dp"
+    android:visibility="gone">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        custom:disable_date_color="#ABABAB"
+        custom:header_bg="@drawable/calendar_header"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:range_color="@color/app_primary_color"
+        custom:selected_date_circle_color="@color/selected_date_circle_color"
+        custom:title_color="@color/calendar_header_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

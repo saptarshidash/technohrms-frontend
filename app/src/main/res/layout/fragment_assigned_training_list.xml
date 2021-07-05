@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:custom="http://schemas.android.com/apk/res-auto"
+  tools:context=".ui.training.AssignedTrainingListFragment">
+
+  <LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@color/app_primary_color"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+      android:id="@+id/employeeSpinner"
+      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:background="@drawable/round_button"
+      android:backgroundTint="@color/white"
+      app:smsp_hint="Select Employee"
+      app:smsp_hintColor="#757575"
+      app:smsp_itemColor="#512DA8"
+      app:smsp_itemListColor="#7C4DFF"
+      app:smsp_itemListHintBackgroundColor="#808080"
+      app:smsp_itemListHintColor="#FFFFFF"
+      app:smsp_multilineError="false"
+      app:smsp_selectedItemListColor="#FF5252"
+      custom:smsp_arrowColor="@color/black"
+      custom:smsp_hintSize="15sp"
+      custom:smsp_paddingLeftRight="10dp"
+      android:paddingLeft="15dp"
+      android:paddingTop="10sp"
+      custom:smsp_underlineColor="@color/smsp_transparent_color"
+      custom:smsp_isSearchable="true"
+      custom:smsp_enableSearchHeader="true"
+      custom:smsp_enableFloatingLabel="false"/>
+
+
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/layoutFilter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#2F686BB6"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    custom:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+      android:id="@+id/trainingSpinner"
+      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+      android:layout_width="150dp"
+      android:layout_height="45dp"
+      android:background="@drawable/round_button"
+      android:backgroundTint="@color/app_primary_color"
+      app:smsp_hint="Select Training"
+      app:smsp_hintSize="14sp"
+      app:smsp_hintColor="@color/white"
+      app:smsp_itemColor="@color/white"
+      app:smsp_itemListColor="#7C4DFF"
+      app:smsp_itemListHintBackgroundColor="#808080"
+      app:smsp_itemListHintColor="#FFFFFF"
+      app:smsp_multilineError="false"
+      app:smsp_selectedItemListColor="#FF5252"
+      custom:smsp_arrowColor="@color/white"
+      custom:smsp_paddingLeftRight="10dp"
+      android:paddingLeft="10dp"
+      android:paddingTop="5sp"
+      custom:smsp_underlineColor="@color/smsp_transparent_color"
+      custom:smsp_isSearchable="true"
+      custom:smsp_enableSearchHeader="true"
+      custom:smsp_enableFloatingLabel="false"
+      android:layout_marginLeft="10sp">
+
+
+    </com.chivorn.smartmaterialspinner.SmartMaterialSpinner>
+
+
+
+  </LinearLayout>
+
+  <com.todkars.shimmer.ShimmerRecyclerView
+    android:id="@+id/recyclerAssignedTraining"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutFilter"
+    android:orientation="vertical"
+    custom:shimmer_recycler_layout="@layout/list_item_shimmer"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    custom:shimmer_recycler_item_count="10"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/btnAssignTraining"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="32dp"
+    android:layout_marginEnd="32dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:fabCustomSize="70dp"
+    android:src="@drawable/ic_add_24"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:backgroundTint="@color/app_primary_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="20dp">
+
+      <TextView
+        android:id="@+id/txtViewLeaveName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Casual Leave"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/txtViewEmpName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Request by Saptarshi Das"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/imgLeaveStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewLeaveName" />
+
+      <TextView
+        android:id="@+id/txtViewLeaveFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2021-06-17 "
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEmpName" />
+
+      <TextView
+        android:id="@+id/textViewLeaveTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="- 2021-06-20"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/txtViewLeaveFrom"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEmpName" />
+
+      <ImageView
+        android:id="@+id/imgLeaveStatus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtViewLeaveName" />
+
+     <!-- <Button
+        android:id="@+id/btnLeaveStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewLeaveName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtViewEmpName"
+        app:layout_constraintTop_toTopOf="@+id/txtViewLeaveName"
+        /> -->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

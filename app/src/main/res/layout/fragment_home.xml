@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".ui.dashboard.HomeFragment">
+
+  <LinearLayout
+    android:id="@+id/textRow1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent=".14"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="5"
+      android:orientation="vertical">
+
+      <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/app_primary_color">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_employee"/>
+
+          <TextView
+            android:id="@+id/txtViewTotalEmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="22sp"/>
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Employee"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+
+      </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+    </LinearLayout>
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="5"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+
+
+      <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/app_primary_color">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_department"/>
+
+          <TextView
+            android:id="@+id/txtViewTotalDept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="22sp"/>
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departments"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+
+      </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/textRow2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent=".14"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textRow1">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="5"
+      android:orientation="vertical">
+
+      <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/app_primary_color">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_attendance" />
+
+          <TextView
+            android:id="@+id/txtViewAttendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="14"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Todays Attendance"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+      </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+    </LinearLayout>
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="5"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+
+
+      <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/app_primary_color">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_pending_leaves" />
+
+          <TextView
+            android:id="@+id/txtViewPendingLeaves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Pending Leaves"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+      </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".ui.designation.AddDesignationFragment">
+
+  <LinearLayout
+    android:id="@+id/textRow1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="10"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Designation Name"
+        android:textColor="@color/editTextSubHeading"
+
+        android:textSize="14sp" />
+
+
+      <EditText
+        android:id="@+id/edTxtEmpDesignation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:background="@color/editTextBackground"
+        android:hint="Software Development Engineer 1"
+        android:maxLines="1"
+        android:textColorHint="@color/greyDate" />
+
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/textRow2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textRow1">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="10"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Description"
+        android:textColor="@color/editTextSubHeading"
+
+        android:textSize="14sp" />
+      <EditText
+        android:id="@+id/edTxtEmpDesignationDesc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:background="@color/editTextBackground"
+        android:hint="Enter a description here"
+        android:inputType="text"
+        android:textColorHint="@color/greyDate" />
+
+
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/textRow3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginTop="8dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent=".14"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textRow2">
+
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="10"
+      android:layout_marginLeft="5dp"
+      android:orientation="vertical">
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddDesignation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordBox"
+        android:layout_marginTop="30dp"
+        android:text="SAVE Designation"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/app_primary_color"
+        />
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

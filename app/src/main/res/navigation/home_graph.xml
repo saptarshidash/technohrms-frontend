@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/home_graph"
+  app:startDestination="@id/homeFragment">
+
+  <fragment
+    android:id="@+id/homeFragment"
+    android:name="com.saptarshidas.technohrms.ui.dashboard.HomeFragment"
+    android:label="Dashboard"
+    tools:layout="@layout/fragment_home" >
+    <action
+      android:id="@+id/action_homeFragment_to_employeeOverviewFragment"
+      app:destination="@id/employeeOverviewFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_addEmployeeFragment"
+      app:destination="@id/addEmployeeFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_addDepartmentFragment"
+      app:destination="@id/addDepartmentFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_departmentOverviewFragment"
+      app:destination="@id/departmentOverviewFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_addDesignationFragment"
+      app:destination="@id/addDesignationFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_designationListFragment"
+      app:destination="@id/designationListFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_trainingListFragment"
+      app:destination="@id/trainingListFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_assignedTrainingListFragment"
+      app:destination="@id/assignedTrainingListFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_leaveRequestListFragment"
+      app:destination="@id/leaveRequestListFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_attendanceListFragment"
+      app:destination="@id/attendanceListFragment" />
+    <action
+      android:id="@+id/action_homeFragment_to_userRegFragment"
+      app:destination="@id/userRegFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/employeeOverviewFragment"
+    android:name="com.saptarshidas.technohrms.ui.employee.EmployeeListFragment"
+    android:label="Employee Overview"
+    tools:layout="@layout/fragment_employee_list" >
+    <action
+      android:id="@+id/action_employeeOverviewFragment_to_detailedEmployeeFragment"
+      app:destination="@id/detailedEmployeeFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/addEmployeeFragment"
+    android:name="com.saptarshidas.technohrms.ui.employee.AddEmployeeFragment"
+    android:label="Add Employee"
+    tools:layout="@layout/fragment_add_employee" />
+  <fragment
+    android:id="@+id/detailedEmployeeFragment"
+    android:name="com.saptarshidas.technohrms.ui.employee.DetailedEmployeeFragment"
+    android:label="Employee Detail"
+    tools:layout="@layout/fragment_detailed_employee" >
+    <argument
+      android:name="employee"
+      app:argType="com.saptarshidas.technohrms.data.model.Employee" />
+    <action
+      android:id="@+id/action_detailedEmployeeFragment_to_leaveSetupFragment"
+      app:destination="@id/leaveSetupFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/leaveSetupFragment"
+    android:name="com.saptarshidas.technohrms.ui.employee.LeaveSetupFragment"
+    android:label="Employee Leave Setup"
+    tools:layout="@layout/fragment_leave_setup" >
+    <argument
+      android:name="employee"
+      app:argType="com.saptarshidas.technohrms.data.model.Employee" />
+    <action
+      android:id="@+id/action_leaveSetupFragment_to_viewLeaveSetupFragment"
+      app:destination="@id/viewLeaveSetupFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/viewLeaveSetupFragment"
+    android:name="com.saptarshidas.technohrms.ui.employee.ViewLeaveSetupFragment"
+    android:label="Leave Setups"
+    tools:layout="@layout/fragment_view_leave_setup" >
+    <argument
+      android:name="employee"
+      app:argType="com.saptarshidas.technohrms.data.model.Employee" />
+  </fragment>
+  <fragment
+    android:id="@+id/addDepartmentFragment"
+    android:name="com.saptarshidas.technohrms.ui.department.AddDepartmentFragment"
+    android:label="Add Department"
+    tools:layout="@layout/fragment_add_department" />
+  <fragment
+    android:id="@+id/departmentOverviewFragment"
+    android:name="com.saptarshidas.technohrms.ui.department.DepartmentOverviewFragment"
+    android:label="Department Overview"
+    tools:layout="@layout/fragment_department_overview" >
+    <action
+      android:id="@+id/action_departmentOverviewFragment_to_detailedDepartmentFragment"
+      app:destination="@id/detailedDepartmentFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/detailedDepartmentFragment"
+    android:name="com.saptarshidas.technohrms.ui.department.DetailedDepartmentFragment"
+    android:label="Department Detail"
+    tools:layout="@layout/fragment_detailed_department" >
+    <argument
+      android:name="department"
+      app:argType="com.saptarshidas.technohrms.data.exchanges.department.DepartmentDto" />
+  </fragment>
+  <fragment
+    android:id="@+id/addDesignationFragment"
+    android:name="com.saptarshidas.technohrms.ui.designation.AddDesignationFragment"
+    android:label="Add Designation"
+    tools:layout="@layout/fragment_add_designation" />
+  <fragment
+    android:id="@+id/designationListFragment"
+    android:name="com.saptarshidas.technohrms.ui.designation.DesignationListFragment"
+    android:label="All Designations"
+    tools:layout="@layout/fragment_designation_list" />
+  <fragment
+    android:id="@+id/trainingListFragment"
+    android:name="com.saptarshidas.technohrms.ui.training.TrainingListFragment"
+    android:label="Training List"
+    tools:layout="@layout/fragment_training_list" >
+    <action
+      android:id="@+id/action_trainingListFragment_to_addTrainingFragment"
+      app:destination="@id/addTrainingFragment" />
+    <action
+      android:id="@+id/action_trainingListFragment_to_detailedTrainingFragment"
+      app:destination="@id/detailedTrainingFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/addTrainingFragment"
+    android:name="com.saptarshidas.technohrms.ui.training.AddTrainingFragment"
+    android:label="Add Training"
+    tools:layout="@layout/fragment_add_training" />
+  <fragment
+    android:id="@+id/assignedTrainingListFragment"
+    android:name="com.saptarshidas.technohrms.ui.training.AssignedTrainingListFragment"
+    android:label="Assigned Trainings"
+    tools:layout="@layout/fragment_assigned_training_list" >
+    <action
+      android:id="@+id/action_assignedTrainingListFragment_to_detailedAssignedTrainingFragment"
+      app:destination="@id/detailedAssignedTrainingFragment" />
+    <action
+      android:id="@+id/action_assignedTrainingListFragment_to_assignTrainingFragment"
+      app:destination="@id/assignTrainingFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/detailedAssignedTrainingFragment"
+    android:name="com.saptarshidas.technohrms.ui.training.DetailedAssignedTrainingFragment"
+    android:label="Assigned Training Info"
+    tools:layout="@layout/fragment_detailed_assigned_training" >
+    <argument
+      android:name="trainingEmployee"
+      app:argType="com.saptarshidas.technohrms.data.exchanges.training.TrainingEmployeeDto" />
+  </fragment>
+  <fragment
+    android:id="@+id/assignTrainingFragment"
+    android:name="com.saptarshidas.technohrms.ui.training.AssignTrainingFragment"
+    android:label="Assign Training"
+    tools:layout="@layout/fragment_assign_training" />
+  <fragment
+    android:id="@+id/detailedTrainingFragment"
+    android:name="com.saptarshidas.technohrms.ui.training.DetailedTrainingFragment"
+    android:label="Training Detail"
+    tools:layout="@layout/fragment_detailed_training" >
+    <argument
+      android:name="training"
+      app:argType="com.saptarshidas.technohrms.data.exchanges.training.TrainingDto" />
+  </fragment>
+  <fragment
+    android:id="@+id/leaveRequestListFragment"
+    android:name="com.saptarshidas.technohrms.ui.leave.LeaveRequestListFragment"
+    android:label="Leave Requests"
+    tools:layout="@layout/fragment_leave_request_list" >
+    <action
+      android:id="@+id/action_leaveRequestListFragment_to_detailedLeaveRequestFragment"
+      app:destination="@id/detailedLeaveRequestFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/detailedLeaveRequestFragment"
+    android:name="com.saptarshidas.technohrms.ui.leave.DetailedLeaveRequestFragment"
+    android:label="Approve Request"
+    tools:layout="@layout/fragment_detailed_leave_request" >
+    <argument
+      android:name="leaveRequest"
+      app:argType="com.saptarshidas.technohrms.data.exchanges.leave.LeaveRequestDto" />
+  </fragment>
+  <fragment
+    android:id="@+id/attendanceListFragment"
+    android:name="com.saptarshidas.technohrms.ui.attendance.AttendanceListFragment"
+    android:label="Attendance List"
+    tools:layout="@layout/fragment_attendance_list" />
+  <fragment
+    android:id="@+id/userRegFragment"
+    android:name="com.saptarshidas.technohrms.ui.auth.UserRegFragment"
+    android:label="Add User"
+    tools:layout="@layout/fragment_user_reg" />
+</navigation>
